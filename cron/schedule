@@ -1,0 +1,2 @@
+* * * * * root date '+\%Y-\%m-\%d \%H:\%M:\%S' 1>>/tmp/schedule.log 2>>/tmp/schedule-error.log
+

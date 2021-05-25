@@ -1,0 +1,15 @@
+version: '3'
+services:
+  linux:
+    build:
+      context: ../
+      dockerfile: ./docker/linux/Dockerfile
+    tty: true
+    volumes:
+      - ../:/project
+      - ../cron/schedule:/etc/cron.d/schedule
+      - ../files/logs/schedule.log:/tmp/schedule.log
+      - ../files/logs/schedule.log:/tmp/schedule-error.log
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    cap_add:
+      - SYS_ADMIN
