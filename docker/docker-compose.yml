@@ -10,4 +10,3 @@ services:
       - ../cron/schedule:/etc/cron.d/schedule
       - ../files/logs/schedule.log:/tmp/schedule.log
       - ../files/logs/schedule.log:/tmp/schedule-error.log
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
