@@ -17,7 +17,7 @@ $ mkdir -p ../files/logs && \
   touch ../files/logs/{schedule.log,schedule-error.log} && \
   docker-compose build && \
   docker-compose up -d && \
-  docker-compose exec linux bash -c "/etc/init.d/cron start && /etc/init.d/rsyslog restart && /bin/bash"
+  docker-compose exec linux bash -c "service cron start && service rsyslog restart && /bin/bash"
 ```
 
 ## cron が動いてるか確認する
