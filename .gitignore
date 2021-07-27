@@ -3,3 +3,6 @@
 
 # File folder
 files
+
+# env files
+*.env
