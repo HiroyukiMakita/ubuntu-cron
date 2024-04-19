@@ -3,7 +3,7 @@ FROM ubuntu:latest
 WORKDIR /project
 
 RUN apt-get -y update && \
-    apt-get -y install cron procps rsyslog less tzdata vim && \
+    apt-get -y install cron procps rsyslog systemctl less tzdata vim && \
     ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 COPY cron/schedule /etc/cron.d/schedule

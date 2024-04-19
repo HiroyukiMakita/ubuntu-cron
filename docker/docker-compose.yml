@@ -1,9 +1,9 @@
-version: '3'
 services:
   linux:
     build:
       context: ../
       dockerfile: ./docker/linux/Dockerfile
+    command: bash -c "service cron start && systemctl restart rsyslog && /bin/bash"
     tty: true
     volumes:
       - ../:/project
